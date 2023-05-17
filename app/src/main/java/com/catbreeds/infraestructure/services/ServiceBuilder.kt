@@ -18,9 +18,6 @@ object ServiceBuilder {
     private val okHttp: OkHttpClient.Builder = OkHttpClient.Builder()
         .addInterceptor(logger)
 
-        //.connectTimeout(3, TimeUnit.MINUTES)
-        //.readTimeout(3, TimeUnit.MINUTES)
-
     private val builder: Retrofit.Builder = Retrofit.Builder()
         .baseUrl(URL_API)
         .addConverterFactory(GsonConverterFactory.create())

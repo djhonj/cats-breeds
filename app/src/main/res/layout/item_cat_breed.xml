@@ -2,18 +2,22 @@
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_ten"
+    app:cardCornerRadius="@dimen/card_radius"
+    app:cardElevation="@dimen/card_elevated">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:padding="@dimen/app_padding"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:padding="@dimen/app_padding">
 
         <TextView
             android:id="@+id/tvName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Breed name"
+            android:layout_marginBottom="@dimen/margin_ten"
             app:layout_constraintBottom_toTopOf="@id/ivImage"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -35,6 +39,16 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/ivImage" />
+
+<!--        <TextView-->
+<!--            android:id="@+id/tvAffection"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Affection level"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toStartOf="@id/tvIntelligence"-->
+<!--            app:layout_constraintStart_toEndOf="@id/tvOrigen"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/ivImage" />-->
 
         <TextView
             android:id="@+id/tvIntelligence"

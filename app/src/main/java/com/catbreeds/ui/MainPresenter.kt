@@ -5,7 +5,11 @@ import com.catbreeds.usecases.GetCats
 
 class MainPresenter(private val getCats: GetCats) {
     suspend fun getCats(): List<Cat> {
-
-        return getCats.invoke()
+        return try {
+            getCats.invoke()
+        } catch (e: Exception) {
+            android.util.Log.e("error", e.message.toString())
+            listOf<Cat>()
+        }
     }
 }

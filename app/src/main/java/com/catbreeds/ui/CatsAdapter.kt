@@ -30,9 +30,10 @@ class CatsAdapter(private val cats: List<Cat>): RecyclerView.Adapter<CatsAdapter
 
     class ViewHolder(private val view: View): RecyclerView.ViewHolder(view) {
         fun bind(cat: Cat) {
-            view.findViewById<TextView>(R.id.tvName).text = cat.breedName
-            view.findViewById<TextView>(R.id.tvOrigen).text =cat.origin
-            view.findViewById<TextView>(R.id.tvIntelligence).text = cat.affectionLevel.toString()
+            view.findViewById<TextView>(R.id.tvName).text = "name: ${cat.breedName}"
+            view.findViewById<TextView>(R.id.tvOrigen).text = "origin: ${cat.origin}"
+            view.findViewById<TextView>(R.id.tvIntelligence).text = "affection level: ${cat.affectionLevel}"
+            //view.findViewById<TextView>(R.id.tvAffection).text = "affection level: ${cat.intelligence}"
 
             Picasso
                 .get()
